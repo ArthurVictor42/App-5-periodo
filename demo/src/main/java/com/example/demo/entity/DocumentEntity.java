@@ -9,12 +9,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserEntity {
+public class DocumentEntity {
 
     private int id;
-    private String username;
-    private String email;
-    private String password;
-    private String cpf;
-
+    private String nameDocument;
+    private String filePath;
 }
