@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.UserRegistrerResquest;
 import com.example.demo.dto.UserRequest;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/User")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
@@ -22,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping("/registrar")
-    private ResponseEntity<Void> Cadastrar(@RequestBody UserRequest userRequest) {
+    private ResponseEntity<Void> Cadastrar(@RequestBody UserRegistrerResquest userRequest) {
         userService.registrar(userRequest);
 
         return new ResponseEntity<>(HttpStatus.CREATED);

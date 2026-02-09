@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/Document")
+@RequestMapping("/documents")
 public class DocumentControler {
 
     @Autowired
     private DocumentService documentService;
+
+
 }
