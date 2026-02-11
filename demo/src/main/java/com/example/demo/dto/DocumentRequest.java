@@ -1,4 +1,4 @@
 package com.example.demo.dto;
 
-public record DocumentRequest() {
+public record DocumentRequest(String nameDocument) {
 }
